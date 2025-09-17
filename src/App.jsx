@@ -1,9 +1,13 @@
+// App: Fetches users and renders a responsive grid of modern cards
 import axios from "axios";
 import "./App.css";
 import { useEffect, useState } from "react";
 
 function App() {
+  // Local state for fetched users
   const [users, setUsers] = useState([]);
+
+  // Fetch once on mount
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
       setUsers(res.data);
@@ -12,11 +16,13 @@ function App() {
 
   return (
     <div className="app-container">
+      {/* Page header */}
       <header className="app-header">
         <h1 className="app-title">Name List</h1>
         <p className="app-subtitle">Clean cards • Responsive grid • Smooth hover</p>
       </header>
 
+      {/* Responsive grid of user cards */}
       <main className="grid-container">
         {users.map((item) => (
           <article key={item.id} className="card">

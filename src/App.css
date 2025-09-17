@@ -1,10 +1,11 @@
+/* App.css: Layout, responsive grid, and modern card UI */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem 1.25rem;
 }
 
-/* App container and header */
+/* Structure */
 .app-container {
   display: flex;
   flex-direction: column;
@@ -35,7 +36,7 @@
   align-items: stretch;
 }
 
-/* Card styles */
+/* Card */
 .card {
   background: #ffffff;
   color: #213547;
@@ -51,7 +52,7 @@
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Avatar circle */
+/* Avatar */
 .avatar {
   width: 44px;
   height: 44px;
@@ -109,7 +110,7 @@
   border: 1px solid #e2e8f0;
 }
 
-/* Light/Dark support based on existing index.css scheme */
+/* Light/Dark support */
 @media (prefers-color-scheme: dark) {
   .card {
     background: #1f2937;
